@@ -1,18 +1,277 @@
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 24px;
-  padding: 24px;
-  list-style: none;
+.text-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #333;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
 }
-.gallery-image {
+
+.text-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.text-page p {
+  margin-bottom: 1rem;
+}
+/* 🔐 Стилі для pop-up 18+ */
+#age-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 4px;
-  transition: transform 250ms ease, box-shadow 250ms ease;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
-.gallery-link:hover .gallery-image {
-  transform: scale(1.03);
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 320px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.modal-content button {
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-content button#btn-no {
+  background-color: #e53935;
+}
+
+.modal-content button:hover {
+  opacity: 0.85;
+}
+body {
+  background: linear-gradient(135deg, #1f1f29, #2a2a38); /* Темно-фіолетовий градієнт */
+  color: #fff;
+  font-family: 'Inter', sans-serif; /* Якщо вже підключений */
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+.hero-benefits {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* 🔘 Контейнер усієї картки */
+.offer-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #1f1f29, #2a2a38);
+  color: #fff;
+  border: 2px solid #3d3d5c;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  max-width: 1000px;
+  margin: 1rem auto;
+  gap: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  position: relative;
+   font-family: 'Inter', sans-serif;
+}
+
+.offer-number {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 0.2rem 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  color: #ffc107;
+}
+
+.offer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+}
+
+.offer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+
+.offer-prompt {
+  font-size: 0.8rem;
+  color: #ffd700;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.offer-img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.offer-bonus {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.offer-prompt {
+  font-size: 0.75rem;
+  color: #fff;
+  background: linear-gradient(135deg, #6c41f5, #8f5cf5); /* 💜 фіолетовий глянець */
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  box-shadow: 0 0 6px rgba(140, 100, 255, 0.6);
+}
+
+.bonus-main {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+.bonus-sub {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 0.2rem 0 0;
+}
+
+.offer-rating-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.rating-score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffeb3b;
+  line-height: 1;
+}
+
+.stars {
+  font-size: 0.95rem;
+  color: #ffca28;
+  letter-spacing: 0.1rem;
+  margin-top: 0.2rem;
+}
+
+.vote-count {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: 0.2rem;
+}
+
+.payment-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem 1.2rem;
+  justify-items: center;
+}
+
+.payment-icons img {
+  width: 40px;
+  height: auto;
+  filter: brightness(1.1);
+}
+
+.offer-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  
+}
+
+.offer-btn {
+  background-color: #ff9800;
+  color: white;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.offer-btn:hover {
+  background-color: #e67e00;
+}
+
+.visit-site {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: #ccc;
+  text-decoration: underline;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.visit-site:hover {
+  color: #fff;
 }
