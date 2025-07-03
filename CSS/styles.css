@@ -1,24 +1,91 @@
+
+/* Стилі для навігаційного меню */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1f1f29;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-nav .logo img {
+  max-height: 40px;
+  width: auto;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  color: #fff;
+  border-bottom: 2px solid #6c41f5;
+}
+
+/* 
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #1f1f29;
+  z-index: 1000;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+nav ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  border-bottom: 2px solid #6c41f5;
+} */
+/* Стилі для сторінки з текстом */
+
+
 .text-page {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
+  color: #f0f0f0;
+  font-size: 1.05rem;
   line-height: 1.6;
-  font-size: 1.1rem;
-  color: #333;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
-  border-radius: 8px;
 }
-
 .text-page h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #222;
+  color: #fff;
+}
+.text-page p {
+  margin-bottom: 1.2rem;
 }
 
-.text-page p {
-  margin-bottom: 1rem;
-}
 /* 🔐 Стилі для pop-up 18+ */
 #age-modal {
   position: fixed;
@@ -61,6 +128,9 @@
 .modal-content button:hover {
   opacity: 0.85;
 }
+
+
+
 body {
   background: linear-gradient(135deg, #1f1f29, #2a2a38); /* Темно-фіолетовий градієнт */
   color: #fff;
